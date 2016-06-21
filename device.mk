@@ -48,7 +48,7 @@ PRODUCT_PACKAGES += \
     Torch
 
 # HWComposer
-PRODUCT_PACKAGES += \
-    hwcomposer.msm7x27a
+#PRODUCT_PACKAGES += \
+#    hwcomposer.msm7x27a
 
 include device/lge/e610/system_prop.mk
