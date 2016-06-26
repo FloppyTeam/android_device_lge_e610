@@ -17,6 +17,7 @@ import init.lge.shared.rc
 
 on fs
     mount_all fstab.m4
+    swapon_all fstab.m4
 
 on boot
     chown system system /sys/class/input/input3/range
