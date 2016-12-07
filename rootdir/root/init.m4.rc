@@ -19,6 +19,11 @@ on fs
     mount_all fstab.m4
     swapon_all fstab.m4
 
+on early-boot
+    chmod 0777 /dev/input/event0
+    chmod 0777 /dev/input/event5
+    chmod 0777 /dev/input/event3
+    
 on boot
     chown system system /sys/class/input/input3/range
     chown system system /sys/class/input/input3/bandwidth
@@ -39,9 +44,14 @@ on boot
     chown system system /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
     chmod 0660 /sys/bus/i2c/drivers/proximity_gp2ap/6-0044/enable
 
+    # KSM
+    write /sys/kernel/mm/ksm/pages_to_scan 100
+    write /sys/kernel/mm/ksm/sleep_millisecs 500
+    write /sys/kernel/mm/ksm/run 1
+
     # NFC
-    chmod 0600 /dev/pn544
-    chown nfc nfc /dev/pn544
+    # chmod 0600 /dev/pn544
+    # chown nfc nfc /dev/pn544
 
     # Torch perms
     chown system camera /sys/devices/platform/i2c-gpio.3/i2c-3/3-0030/brightness_uA
