@@ -62,7 +62,6 @@ ro.max.fling_velocity=4000
 # Video Acceleration
 video.accelerate.hw=1
 
-
 # Media
 ro.media.enc.jpeg.quality=100
 media.stagefright.enable-player=true
@@ -76,8 +75,6 @@ media.stagefright.enable-meta=false
 # Dalvik
 dalvik.vm.heapsize=48m
 ro.zram.default=0
-ro.sys.fw.bg_apps_limit=7
-sys.mem.max_hidden_apps=7
 dalvik.vm.checkjni=0
 dalvik.vm.checkjni=false
 dalvik.vm.dexopt-data-only=1
